@@ -30,7 +30,7 @@ public class Postmortem extends JavaPlugin implements Listener
 	@EventHandler(priority = EventPriority.MONITOR)
 	public void onPlayerDeath(PlayerDeathEvent event)
 	{
-		if (event.getEntity().hasPermission("deathpoint.notifyothers"))
+		if (event.getEntity().hasPermission("postmortem.notifyothers"))
 		{
 			String victim = event.getEntity().getName();
 			String killer = "";
@@ -47,14 +47,14 @@ public class Postmortem extends JavaPlugin implements Listener
 				msg = msgOtherFormat.replaceAll("\\{VICTIM\\}", victim).replaceAll("\\{LOCATION\\}",location).replaceAll("\\{WORLD\\}", world).replaceAll("&", "§");
 			for (Player player : getServer().getOnlinePlayers())
 			{
-				if(player.hasPermission("deathpoint.receivenotify") && !killer.isEmpty())
+				if(player.hasPermission("postmortem.receivenotify") && !killer.isEmpty())
 				{
 					if ((notifyOwnDeath || !(player.getName().equals(victim))) && (notifyOwnKill || !(player.getName().equals(killer))))
 					{
 						player.sendMessage(msg);
 					}
 				}
-				else if (player.hasPermission("deathpoint.receivenotify"))
+				else if (player.hasPermission("postmortem.receivenotify"))
 				{
 					if ((notifyOwnDeath || !(player.getName().equals(victim))))
 					{

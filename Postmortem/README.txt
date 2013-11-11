@@ -1,9 +1,9 @@
-DeathNotify provides server admins with information about where player deaths occur and who is responsible.
+Postmortem provides server admins with information about where player deaths occur and who is responsible.
 
 Permissions:
 
-deathnotify.notifyothers: Causes this player's deaths to generate notifications
-deathnotify.receivenotify: Causes this player to receive notifications
+postmortem.notifyothers: Causes this player's deaths to generate notifications
+postmortem.receivenotify: Causes this player to receive notifications
 
 Config:
 
