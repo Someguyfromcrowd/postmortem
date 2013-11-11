@@ -1,0 +1,5 @@
+notifyOwnDeath: true
+notifyOwnKill: true
+log: true
+playerFormat: "&2{VICTIM} has been killed by {KILLER} at {LOCATION} in {WORLD}!"
+nonPlayerFormat: "&2{VICTIM} has been killed at {LOCATION} in {WORLD}!"
