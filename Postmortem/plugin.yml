@@ -4,7 +4,7 @@ version: 1.01
 author: Someguyfromcrowd
 
 permissions:
-  postmortem.notifyothers:
+  postmortem.notify:
     description: Send a notification to those with receivenotify upon death
-  postmortem.receivenotify:
+  postmortem.receive:
     description: Receive death notifications
